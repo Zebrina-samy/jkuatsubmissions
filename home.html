@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>My First Web</title>
+    <meta charset="UTF-9">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    
+</head>
+
+
+<a href="#" style="margin-left: 40% ; text-decoration: none; font-size: 28px; color: rgb(235, 8, 76);">MY FIRST WEB MAP APP</a>
+<body>
+    <section>
+<div id="map" style="width:100%; height:400px;"></div>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+        <script>
+            // map options
+            var mapOptions = {
+             center:[-1.286389, 36.817223],
+             zoom:10
+            }
+            //create map object
+            var map = new L.map('map', mapOptions)
+            //layer obj
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+            var marker = L.marker([-1.286389, 36.817223]).addTo(map);
+         
+            //add layer
+            map.addLayer(layer);
+         
+         
+         </script>
+    </section>
+
+    <section class="footer">
+    
+        <style>
+        .footer{
+            
+            background-color: rgb(121, 36, 102);
+            min-height: 30vh;
+    
+
+        }
+       
+        </style>
+        
+        <div class="footer_section">
+       <style>
+        .footer_section{
+            display: flex;
+            flex-direction: row;
+            row-gap: 2rem;
+            color: rgb(204, 238, 12);
+            list-style: none;
+            margin-top: 1.8rem;
+        }
+       </style>
+       <li class="contributers">CONTRIBUTERS
+        <ul style="color: rgb(6, 6, 202);">Ambuka Samwel</ul>
+        
+       </li>
+       <li  style="margin-left: 40% ;" class="authers">AUTHORS
+        <ul style="color: blue;">OPEN STREET</ul>
+    </li>
+       <li  style="margin-left: 35% ;" class="marginal information">MARGINAL INFORMATION
+        <ul style="color: blue;">Ambuka Samwel</ul>
+    </li>
+        </div>
+    </div>
+    
+</section>
+
+</body>
+</html>
